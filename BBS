@@ -1,6 +1,7 @@
 #!/usr/bin/env perl
 use Mojolicious::Lite;
 
+
 my @entries = ();
 get '/' => sub {
   my $self = shift;
