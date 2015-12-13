@@ -1,0 +1,131 @@
+#!/usr/bin/env perl
+use Mojolicious::Lite;
+
+my @entries = ();
+get '/' => sub {
+  my $self = shift;
+  $self->stash(entries => \@entries);
+  #my $entry = $self->param('body');
+  #$self->stash(entry => $entry);
+  $self->render('index');
+};
+#} => 'index';
+
+post '/post' => sub {
+  my $self = shift;
+  my $name = $self->param('name');
+  my $mail = $self->param('mail');
+  my $entry = $self->param('body');
+  chomp($mail);
+  my $data = sprintf("%s %s %s", $name, $mail, $entry);
+  if($mail =~ m/\Aage\z/) {
+    unshift @entries, $data;
+  } else {
+    push @entries, $data;
+  }
+  $self->redirect_to('/');
+  #$self->stash(entry => $entry);
+  #$self->render('post');
+};
+
+app->start;
+__DATA__
+
+@@ index.html.ep
+%# bootstrapスタイル名一覧
+%# default  白地に黒文字
+%# primary 青地に白文字
+%# success 緑地に白文字
+%# info  水色地に白文字
+%# warning オレンジ色地に白文字
+%# danger  赤色地に白文字
+%# link  白地に青文字
+
+% layout 'default';
+% title '入力フォーム';
+%= form_for '/post' => method => 'POST' => begin
+name:
+  %= text_field 'name', class=>''
+mail:
+  %= text_field 'mail'
+message:
+  %= text_field 'body'
+<br>
+  %= submit_button '投稿するdefault', class => 'btn btn-default btn-sm'
+  %= submit_button '投稿するprimary', class => 'btn btn-primary btn-lg'
+  %= submit_button '投稿するsuccess', class => 'btn btn-success btn-sm'
+  %= submit_button '投稿するinfo', class => 'btn btn-info btn-sm'
+  %= submit_button '投稿するwarning', class => 'btn btn-warning btn-sm'
+  %= submit_button '投稿するdanger', class => 'btn btn-danger btn-sm'
+  %= submit_button '投稿するlink', class => 'btn btn-link btn-sm'
+% end
+
+%# テーブルデモ
+%# tr要素／td要素のclassに対して
+%# 「active」「success」「warning」「danger」「info」
+%# のいずれかを指定すると、それぞれの値に対応した背景色にすることができます。
+% my @table_bg_class = ( 'active', 'success', 'warning', 'danger', 'info' );
+<div class="container">
+<div class='table-responsive'>
+%#<table class="table table-striped table-bordered table-hover">
+<table class="table table-bordered table-hover">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>message</th>
+    </tr>
+  </thead>
+  <tbody>
+% for(my $i = 0; $i < scalar(@$entries); $i++){
+%   my $num = int(rand(5));
+    <tr class='<%= "$table_bg_class[$num]" %>' >
+      <td><%= $i %></td>
+      <td><%= $entries->[$i] . ' ' . $table_bg_class[$num] %></td>
+    </tr>
+% }
+  </tbody>
+</table>
+</div>
+</div>
+
+<div>
+<p class='bg-primary>test p1</p>
+</div>
+<div>
+<p class='bg-danger>test p2</p>
+</div>
+
+<div class='continer'>
+%= image '/foo.jpg', alt => 'Foo', class => 'img-responsive'
+</div>
+
+<ul class="nav nav-tabs">
+  <li class="active"><a href="#">Home</a></li>
+  <li><a href="#">Profile</a></li>
+  <li><a href="#">Messages</a></li>
+</ul>
+
+<ul class="nav nav-pills">
+  <li class="active"><a href="#">Home</a></li>
+  <li><a href="#">Profile</a></li>
+  <li><a href="#">Messages</a></li>
+</ul>
+
+<ul class="nav nav-pills nav-stacked">
+    <li class="active"><a href="#">Home</a></li>
+    <li><a href="#">Profile</a></li>
+    <li><a href="#">Messages</a></li>
+</ul>
+
+<ul class="nav nav-tabs nav-justified">
+  <li class="active"><a href="#">Home</a></li>
+  <li><a href="#">Profile</a></li>
+  <li><a href="#">Messages</a></li>
+</ul>
+
+<ul class="nav nav-pills nav-justified">
+  <li class="active"><a href="#">Home</a></li>
+  <li><a href="#">Profile</a></li>
+  <li><a href="#">Messages</a></li>
+</ul>
+
