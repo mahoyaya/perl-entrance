@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    %#下の行を追記
+    <%= stylesheet 'css/bootstrap.min.css' %>
+    <link href='https://fonts.googleapis.com/css?family=Inconsolata' rel='stylesheet' type='text/css'>
+    <%= stylesheet 'test-theme.css' %>
+  </head>
+  <body>
+    %#下の２行を追記
+    <script src="http://code.jquery.com/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <%= content %>
+  </body>
+</html>
