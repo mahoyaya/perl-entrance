@@ -88,13 +88,13 @@ name:
 %    for(split(//,$p)){
 %      my $len = length($reaf);
 %      if($i % 2 == 0){
-<font color=<%= $color[int(rand(3))] %> class="blinking">
+         <font color=<%= $color[int(rand(3))] %> class="blinking">
 %      } else {
-<font color=<%= $color[int(rand(3))] %>>
+         <font color=<%= $color[int(rand(3))] %>>
 %      }
-%=       sprintf(qq/%s/, qq/\xa0/ x ($size - $len) . $reaf . $_ . scalar(reverse($reaf)));
-</font>
-%= t 'br'
+%=     sprintf(qq/%s/, qq/\xa0/ x ($size - $len) . $reaf . $_ . scalar(reverse($reaf)));
+       </font>
+%=     t 'br'
 %      last if $len == $size;
 %      $reaf .= $_;
 %      $i++;
