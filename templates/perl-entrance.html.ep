@@ -32,18 +32,19 @@
 <header class="jumbotron">
   <div class="container">
     <br><br><br>
-    <h1>Perl DE Christmas Tree</h1>
+    <h1>Perl DE Christmas tree</h1>
+    <p>Christmas tree for everybody.</p>
     <%= link_to 'http://archives.mag2.com/0000015670/19991212214000000.html' => begin %>この問題を元にしています<% end %>
   </div>
 </header>
 
   
-<!-- header -->
+<!-- header
 %= t div => class=>'hero-unit' => begin
 %= t h1 => 'Perl DE Christmas Tree';
 <%= link_to 'http://archives.mag2.com/0000015670/19991212214000000.html' => begin %>この問題を元にしています<% end %>
 % end
-
+-->
 
 
 <!-- form main -->
