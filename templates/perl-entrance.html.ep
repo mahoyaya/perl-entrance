@@ -61,7 +61,7 @@ name:
     <button class="btn btn-success dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></button>
     <ul class="dropdown-menu">
 %     for(3 .. 16) {
-          <li><%= link_to "post?height=${_}" => begin %><%= $_ %><% end %>
+          <li><%= link_to "https://immense-mesa-4506.herokuapp.com/post?height=${_}" => begin %><%= $_ %><% end %>
 %     }
       <!--
       <li class="divider"></li>
