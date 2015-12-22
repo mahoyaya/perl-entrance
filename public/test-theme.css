@@ -7,11 +7,11 @@ div#christmastree {
 }
 
 header.jumbotron {
+  position:static; top:50px; left:0px
   background: url("Free-Christmas-Desktop.jpg");
   background-position: center center;
   background-size: cover;
   text-shadow: 2px 2px 3px #000;
-  font-weight: bold
   color: #f00;
 }
 
