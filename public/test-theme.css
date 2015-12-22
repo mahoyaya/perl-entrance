@@ -1,11 +1,15 @@
 div#christmastree {
   font-family: 'Inconsolata', Consolas, 'Courier New', Courier, Monaco, monospace;
   width: 800px;
+  background-position: center center;
   margin: 0 auto;
   text-align: left;
   position:static;
 }
 
+body {
+  position: absolute; top:0px; left:0px;
+}
 nav.navbar nav.navbar-inverse {
   height: 50px;
 }
@@ -13,7 +17,7 @@ nav.navbar nav.navbar-inverse {
 header.jumbotron {
   height: 240px;
   background: url("Free-Christmas-Desktop.jpg");
-  background-position: center top;
+  background-position: center center;
   background-size: cover;
   text-shadow: 2px 2px 3px #fff, -2px 2px 3px #fff, 2px -2px 3px #fff, -2px -2px 3px #fff,;
   color: #f00;
