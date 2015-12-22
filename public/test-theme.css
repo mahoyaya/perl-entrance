@@ -7,9 +7,11 @@ div#christmastree {
   position:static;
 }
 
-body {
-  position: absolute; top:0px; left:0px;
+div#zero {
+  margin-top: 0px;
+  margin-bottom: 20px;
 }
+
 nav.navbar nav.navbar-inverse {
   height: 50px;
 }
