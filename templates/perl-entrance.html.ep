@@ -74,17 +74,21 @@ name:
 
 % my $tree = begin
 %  my $aref = shift;
+%  my $star = "#ffff00";
+%  my @color = qw(#ff0000 #006600 #ffff00);
 %  my $p = qw(*!*%/*+-!.**%/*+);
 %  for my $size (@{$aref}){
 %    if($size !~ m/\A[0-9]+\z/ || $size < 3 || $size > 16) {
 %      $size = 6;
 %    }
-%=   sprintf(qq/size: %02d\n/, $size);
+%=   sprintf(qq/size: %02d/, $size);
 %= t 'br'
 %    my $reaf = 0 x ($size * 2 - 1); $reaf = qq//;
 %    for(split(//,$p)){
 %      my $len = length($reaf);
-%=     sprintf(qq/%s\n/, qq/\xa0/ x ($size - $len) . $reaf . $_ . scalar(reverse($reaf)));
+%=     t 'font' color => $color[int(rand(3)) + 1] => begin
+%=       sprintf(qq/%s/, qq/\xa0/ x ($size - $len) . $reaf . $_ . scalar(reverse($reaf)));
+%      end
 %= t 'br'
 %      last if $len == $size;
 %      $reaf .= $_;
