@@ -86,7 +86,7 @@ name:
 %    my $reaf = 0 x ($size * 2 - 1); $reaf = qq//;
 %    for(split(//,$p)){
 %      my $len = length($reaf);
-<font color=<% $color[int(rand(3)) + 1] %>
+<font color=<% $color[int(rand(3))] %>>
 %=       sprintf(qq/%s/, qq/\xa0/ x ($size - $len) . $reaf . $_ . scalar(reverse($reaf)));
 </font>
 %= t 'br'
