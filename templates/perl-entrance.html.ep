@@ -29,7 +29,7 @@
   <div class="container" id="fixtop">
     <br><br><br>
     <h1>Perl DE Christmas tree</h1>
-    <p>Christmas tree for everybody.</p>
+    <p>Christmas tree for everyone.</p>
     <%= link_to 'http://archives.mag2.com/0000015670/19991212214000000.html' => begin %>この問題を元にしています<% end %>
   </div>
 </header>
@@ -81,12 +81,17 @@ name:
 %    if($size !~ m/\A[0-9]+\z/ || $size < 3 || $size > 16) {
 %      $size = 6;
 %    }
+%    my $i = 0;
 %=   sprintf(qq/size: %02d/, $size);
 %= t 'br'
 %    my $reaf = 0 x ($size * 2 - 1); $reaf = qq//;
 %    for(split(//,$p)){
 %      my $len = length($reaf);
+%      if($i % 2 == 0){
+<font color=<%= $color[int(rand(3))] %> class="blinking">
+%      } else {
 <font color=<%= $color[int(rand(3))] %>>
+%      }
 %=       sprintf(qq/%s/, qq/\xa0/ x ($size - $len) . $reaf . $_ . scalar(reverse($reaf)));
 </font>
 %= t 'br'
