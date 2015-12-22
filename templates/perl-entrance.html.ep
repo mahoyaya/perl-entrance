@@ -97,6 +97,7 @@ name:
 %= t 'br'
 %      last if $len == $size;
 %      $reaf .= $_;
+$      $i++;
 %    }
 %= t 'br'
 %  }
