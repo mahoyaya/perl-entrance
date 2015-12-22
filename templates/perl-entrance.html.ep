@@ -44,13 +44,14 @@
 
 
 <!-- form main -->
+<!--
 %= form_for '/post' => method => 'POST' => begin
 name:
   %= text_field 'name', class=>''
 <br>
   %= submit_button '投稿するinfo', class => 'btn btn-info btn-sm'
 % end
-
+-->
 
 <div class="btn-group">
 %=  submit_button "Height", class => "btn btn-success"
@@ -68,10 +69,13 @@ name:
 </div>
 
 
-% my $default = begin
+% my $tree = begin
 %  my $aref = shift;
 %  my $p = qw(*!*%/*+-!.**%/*+);
 %  for my $size (@{$aref}){
+%    if($size !~ m/\A[0-9]+\z/ || $size < 3 || $size > 16) {
+%      $size = 6;
+%    }
 %=   sprintf(qq/size: %02d\n/, $size);
 %= t 'br'
 %    my $reaf = 0 x ($size * 2 - 1); $reaf = qq//;
@@ -89,10 +93,10 @@ name:
 <div id="christmastree">
 % if($height > 0){
 %   my $ary = [$height];
-%=  $default->($ary);
+%=  $tree->($ary);
 % } else {
 %   my $ary = [6, 16];
-%=  $default->($ary);
+%=  $tree->($ary);
 % }
 </div>
 

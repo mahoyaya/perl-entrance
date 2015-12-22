@@ -13,7 +13,7 @@ nav.navbar nav.navbar-inverse {
 header.jumbotron {
   height: 240px;
   background: url("Free-Christmas-Desktop.jpg");
-  background-position: center center;
+  background-position: center top;
   background-size: cover;
   text-shadow: 2px 2px 3px #fff, -2px 2px 3px #fff, 2px -2px 3px #fff, -2px -2px 3px #fff,;
   color: #f00;
