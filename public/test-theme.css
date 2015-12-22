@@ -55,14 +55,14 @@ header .container {
     animation:blink 0.7s ease-in-out infinite alternate;
 }
 @-webkit-keyframes blink{
-    40% {opacity:0;}
+    80% {opacity:0;}
     100% {opacity:1;}
 }
 @-moz-keyframes blink{
-    40% {opacity:0;}
+    80% {opacity:0;}
     100% {opacity:1;}
 }
 @keyframes blink{
-    40% {opacity:0;}
+    80% {opacity:0;}
     100% {opacity:1;}
 }
