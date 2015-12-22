@@ -1,7 +1,7 @@
 div#christmastree {
   font-family: 'Inconsolata', Consolas, 'Courier New', Courier, Monaco, monospace;
   width: 800px;
-  margin: 0 auto;
+  margin-left: 100;
   text-align: left;
   position:static;
 }
