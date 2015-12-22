@@ -22,6 +22,10 @@ header .container {
   margin-bottom: 13%;
 }
 
+#static {
+  position: static;
+}
+
 #relative {
   position: relative;
 }
