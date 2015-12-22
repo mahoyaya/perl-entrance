@@ -75,7 +75,7 @@ name:
 % my $tree = begin
 %  my $aref = shift;
 %  my $star = "#ffff00";
-%  my @color = ("#ff0000", "#006600", "#ffff00");
+%  my @color = ("#ff0000", "#006600", "#ff9900");
 %  my $p = qw(*!*%/*+-!.**%/*+);
 %  for my $size (@{$aref}){
 %    if($size !~ m/\A[0-9]+\z/ || $size < 3 || $size > 16) {
