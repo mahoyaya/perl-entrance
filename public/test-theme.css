@@ -50,9 +50,9 @@ header .container {
 
 /* “_–Å */
 .blinking{
-    -webkit-animation:blink 0.7s ease-in-out infinite alternate;
-    -moz-animation:blink 0.7s ease-in-out infinite alternate;
-    animation:blink 0.7s ease-in-out infinite alternate;
+    -webkit-animation:blink 1.5s ease-in-out infinite alternate;
+    -moz-animation:blink 1.5s ease-in-out infinite alternate;
+    animation:blink 1.5s ease-in-out infinite alternate;
 }
 @-webkit-keyframes blink{
     80% {opacity:0;}
