@@ -1,14 +1,16 @@
 div#christmastree {
   font-family: 'Inconsolata', Consolas, 'Courier New', Courier, Monaco, monospace;
   width: 800px;
-  margin-left: 100;
+  margin-left: 50px;
   text-align: left;
-  position:static;
 }
 
-div#zero {
+div#fixtop {
   margin-top: 0px;
   margin-bottom: 20px;
+}
+div#marginleft {
+  margin-left: 20px;
 }
 
 header.jumbotron {
@@ -18,7 +20,7 @@ header.jumbotron {
   background-size: cover;
   text-shadow: 2px 2px 3px #fff, -2px 2px 3px #fff, 2px -2px 3px #fff, -2px -2px 3px #fff,;
   color: #f00;
-  position: top:0px; left:0px;
+  margin-bottom: 20px
 }
 
 header .container {

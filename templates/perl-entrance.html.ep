@@ -26,7 +26,7 @@
 
 <!-- jumbotron -->
 <header class="jumbotron">
-  <div class="container" id="zero">
+  <div class="container" id="fixtop">
     <br><br><br>
     <h1>Perl DE Christmas tree</h1>
     <p>Christmas tree for everybody.</p>
@@ -53,6 +53,7 @@ name:
 % end
 -->
 
+<div class="marginleft">
 <div class="btn-group">
 %=  submit_button "Height", class => "btn btn-success"
     <!-- <button class="btn btn-success">Hight</button> -->
@@ -66,6 +67,7 @@ name:
       <li><a href="#">Separated link</a></li>
       -->
     </ul>
+</div>
 </div>
 
 
