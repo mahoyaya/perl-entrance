@@ -12,7 +12,7 @@ header.jumbotron {
   background-size: cover;
   text-shadow: 2px 2px 3px #fff, -2px 2px 3px #fff, 2px -2px 3px #fff, -2px -2px 3px #fff,;
   color: #f00;
-  position:absolute; top:50px; left:0px;
+  position: top:0px; left:0px;
 }
 
 header .container {
@@ -20,4 +20,12 @@ header .container {
   margin-left: 3%;
   margin-right: 3%;
   margin-bottom: 13%;
+}
+
+#relative {
+  position: relative;
+}
+
+#absolute {
+  position: absolute;
 }
