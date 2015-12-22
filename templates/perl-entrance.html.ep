@@ -29,7 +29,7 @@
 
 
 <!-- jumbotron -->
-<header class="jumbotron" id="absolute">
+<header class="jumbotron">
   <div class="container">
     <br><br><br>
     <h1>Perl DE Christmas tree</h1>
@@ -56,7 +56,7 @@ name:
 % end
 
 
-<div class="btn-group" id="static">
+<div class="btn-group">
 %=  submit_button "Height", class => "btn btn-success"
     <!-- <button class="btn btn-success">Hight</button> -->
     <button class="btn btn-success dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></button>
@@ -90,7 +90,7 @@ name:
 %  }
 % end
 <!-- christmas tree -->
-<div id="christmastree static">
+<div id="christmastree">
 % if($height > 0){
 %   my $ary = [$height];
 %=  $default->($ary);
