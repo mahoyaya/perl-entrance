@@ -6,6 +6,10 @@ div#christmastree {
   position:static;
 }
 
+div.navbar div.navbar-inverse {
+  height: 50px;
+}
+
 header.jumbotron {
   height: 300px;
   background: url("Free-Christmas-Desktop.jpg");
