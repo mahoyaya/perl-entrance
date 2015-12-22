@@ -53,10 +53,10 @@ name:
 % end
 -->
 
-<div class="marginleft">
+<div id="marginleft">
 ツリーの高さを変えられるよ！
 <div class="btn-group">
-%=  submit_button "高さ", class => "btn btn-success"
+%=  submit_button "高さを変える", class => "btn btn-success"
     <!-- <button class="btn btn-success">Hight</button> -->
     <button class="btn btn-success dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></button>
     <ul class="dropdown-menu">
