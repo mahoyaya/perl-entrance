@@ -7,7 +7,7 @@ div#christmastree {
 }
 
 header.jumbotron {
-  background: url("foo.jpg");
+  background: url("Foo.jpg");
   background-position: center center;
   background-size: cover;
   color: #f00;

@@ -7,7 +7,7 @@ div#christmastree {
 }
 
 header.jumbotron {
-  background: url("Foo.jpg");
+  background: url("https://github.com/mahoyaya/perl-entrance/blob/master/public/foo.jpg");
   background-position: center center;
   background-size: cover;
   color: #f00;
