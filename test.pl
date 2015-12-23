@@ -25,26 +25,6 @@ post '/post' => sub {
   $self->redirect_to('/');
 };
 
-helper default_tree => sub {
-  my $self = shift;
-  my $str;
-  my $p = qw(*!*%/*+-!.**%/*+);
-  for my $size (6, 16){
-   $str .= sprintf(qq/size: %02d\n/, $size);
-   #$str .= sprintf(qq/%s/, "<br>");
-   $str .= sprintf(qq/%s/, "\n");
-   my $reaf = 0 x ($size * 2 - 1); $reaf = qq//;
-   for(split(//,$p)){
-     my $len = length($reaf);
-     $str .= sprintf(qq/%s\n/, qq/\xa0/ x ($size - $len) . $reaf . $_ . scalar(reverse($reaf)));
-     $str .= sprintf(qq/%s/, "\n");
-     last if $len == $size;
-     $reaf .= $_;
-   }
-   $str .= sprintf(qq/%s/, "\n");
- }
- $str;
-};
 
 app->start;
 __DATA__

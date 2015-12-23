@@ -87,6 +87,7 @@ name:
 %    my $reaf = 0 x ($size * 2 - 1); $reaf = qq//;
 %    for(split(//,$p)){
 %      my $len = length($reaf);
+%      last if $len == $size;
 %      if($i % 2 == 0){
          <font color=<%= $color[int(rand(3))] %> class="blinking">
 %      } else {
@@ -95,7 +96,6 @@ name:
 %=     sprintf(qq/%s/, qq/\xa0/ x ($size - $len) . $reaf . $_ . scalar(reverse($reaf)));
        </font>
 %=     t 'br'
-%      last if $len == $size;
 %      $reaf .= $_;
 %      $i++;
 %    }
